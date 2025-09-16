@@ -67,7 +67,6 @@ def solve_sudoku_backjumping(board):
 def find_mrv_cell(board):
     min_options = 10
     chosen_cell = None
-    candidates = []
 
     for r in range(N):
         for c in range(N):

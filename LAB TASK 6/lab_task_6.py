@@ -63,7 +63,6 @@ def solve_sudoku_backjumping(board):
 
 
 # Backjumping with Heuristics (MRV + LCV)
-
 def find_mrv_cell(board):
     min_options = 10
     chosen_cell = None

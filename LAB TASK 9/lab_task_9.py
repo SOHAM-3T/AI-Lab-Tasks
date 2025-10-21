@@ -66,7 +66,6 @@ def contains_var(t: Term) -> bool:
 def forward_chain(rules: List[Tuple[List[Term], Term]], facts: Set[Term], query: Term) -> Tuple[bool, Set[Term]]:
     inferred = set(facts)  # derived facts
     added = True
-
     while added:
         added = False
         for premises, conclusion in rules:
@@ -97,7 +96,6 @@ def forward_chain(rules: List[Tuple[List[Term], Term]], facts: Set[Term], query:
     return False, inferred
 
 if __name__ == "__main__":
-    # Facts:
     #   Parent(John, Mary)
     #   Parent(Mary, Ann)
     facts = {('Parent', 'John', 'Mary'), ('Parent', 'Mary', 'Ann')}

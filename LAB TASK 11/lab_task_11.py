@@ -170,5 +170,3 @@ if __name__ == "__main__":
     print("Gibbs (N=5000):", sampler.gibbs_sampling('Alarm', evidence2, N=5000, burn_in=1000))
     print("Prior (N=20000 via samples):")
     print("  via rejection (same as above):", sampler.rejection_sampling('Alarm', evidence2, N=20000))
-
-

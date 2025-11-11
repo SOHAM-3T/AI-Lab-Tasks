@@ -117,19 +117,18 @@ def solve_and_measure(n, colors):
 
     return n, success, time_taken, mem_used
 
+if __name__ == "__main__":
+    colors = ['R', 'G', 'B', 'Y']
+    sizes = [100, 1000, 10000]
 
-# Main execution
-colors = ['R', 'G', 'B', 'Y']  # 4 colors for planar graph
-sizes = [100, 1000, 10000]  # Adjust if too slow; larger sizes may take significant time/memory
+    results = []
+    for n in sizes:
+        print(f"Running for n={n}...")
+        result = solve_and_measure(n, colors)
+        results.append(result)
 
-results = []
-for n in sizes:
-    print(f"Running for n={n}...")
-    result = solve_and_measure(n, colors)
-    results.append(result)
-
-# Tabulate results
-print("\nResults:")
-print("{:<10} {:<10} {:<15} {:<15}".format("Nodes", "Success", "Time (s)", "Memory (MB)"))
-for n, success, t, m in results:
-    print("{:<10} {:<10} {:<15.4f} {:<15.4f}".format(n, success, t, m))
+    # Tabulate results
+    print("\nResults:")
+    print("{:<10} {:<10} {:<15} {:<15}".format("Nodes", "Success", "Time (s)", "Memory (MB)"))
+    for n, success, t, m in results:
+        print("{:<10} {:<10} {:<15.4f} {:<15.4f}".format(n, success, t, m))

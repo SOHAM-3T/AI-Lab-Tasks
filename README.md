@@ -40,7 +40,7 @@ Each lab task can be run independently. Navigate to the specific directory or ru
 **Example: Running the 8-Puzzle Solver (Task 2)**
 
 ```bash
-python "TASK 2/lab_task_2.1.py"
+python "TASK 2/task_2.1.py"
 ```
 
 **Example: Running the Tic-Tac-Toe AI (Task 7)**
